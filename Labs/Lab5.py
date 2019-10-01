@@ -46,16 +46,36 @@ B = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 
 
 def merge_two(A, B):
-    A += B
-    for i in range(len(A) - 1):
-        least = i
-        for j in range(i + 1, len(A)):
-            if A[j] < A[least]:
-                least = j
-        if not least == i:
-            A[i], A[least] = A[least], A[i]
+    # A += B
+    # for i in range(len(A) - 1):
+    #     least = i
+    #     for j in range(i + 1, len(A)):
+    #         if A[j] < A[least]:
+    #             least = j
+    #     if not least == i:
+    #         A[i], A[least] = A[least], A[i]
+    i = j = 0
+    result = []
+    while i < len(A) and j < len(B):
+        if A[i] <= B[j]:
+            result.append(A[i])
+            i += 1
+        else:
+            result.append(B[j])
+            j += 1
 
-    return A
+    # Add the lefts if one of the list is already finished
+    if i == len(A):
+        while not j == len(B):
+            result.append(B[j])
+            j += 1
+
+    if j == len(B):
+        while not i == len(A):
+            result.append(A[i])
+            i += 1
+
+    return result
 
 
 # Write a program to replace all negative values in a list

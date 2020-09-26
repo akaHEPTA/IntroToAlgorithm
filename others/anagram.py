@@ -10,3 +10,4 @@ def is_anagram(A, B):
 
 
 print(is_anagram("listen", "silent"))
+

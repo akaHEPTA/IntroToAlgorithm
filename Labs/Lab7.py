@@ -31,3 +31,8 @@ def my_palindrome(word):
 print(is_palindrome("madam"))
 print(is_palindrome("racecar"))
 print(is_palindrome("pizza"))
+
+print(my_palindrome("madam"))
+print(my_palindrome("racecar"))
+print(my_palindrome("pizza"))
+

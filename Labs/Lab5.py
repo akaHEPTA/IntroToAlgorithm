@@ -30,9 +30,7 @@ def sort_half(alist):
         if not least == i:
             last_half[i], last_half[least] = last_half[least], last_half[i]
 
-    first_half += last_half
-
-    return first_half
+    return first_half + last_half
 
 
 # Suppose two lists A and B have already been sorted.
@@ -66,14 +64,10 @@ def merge_two(A, B):
 
     # Add the lefts if one of the list is already finished
     if i == len(A):
-        while not j == len(B):
-            result.append(B[j])
-            j += 1
+        result += B[j:]
 
     if j == len(B):
-        while not i == len(A):
-            result.append(A[i])
-            i += 1
+        result += A[i:]
 
     return result
 

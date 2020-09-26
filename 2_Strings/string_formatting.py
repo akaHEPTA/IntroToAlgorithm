@@ -3,6 +3,7 @@
 
 favorite = "ice cream" "helado"
 
+print(favorite)
 print("ice" in favorite)
 
 # Escaping Characters (\", \', \n)
@@ -13,7 +14,7 @@ message = "Hi, \n How are you?\nI'm doing good!"
 print(message)
 
 # Multi-line strings
-phtase = """
+prase = """
 It is a really long string
 triple-quoted strings are used
 to define multi-line strings.
@@ -27,7 +28,7 @@ message = "hello, pycharm! My name is %s" % name
 print(message)
 
 current_year = 2019
-year = "It's %d current_yaer "
+year = "It's %d" % current_year
 print(year)
 
 info = "name = %s, year = %d ( name, cure"
